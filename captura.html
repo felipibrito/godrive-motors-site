@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista VIP GoDrive Motors — Receba as vagas primeiro</title>
+<meta name="description" content="Entre para a lista da GoDrive Motors e seja avisado primeiro quando abrirem vagas de Prius para aluguel semanal e compra parcelada em Hillside, NJ.">
+<meta property="og:title" content="Lista VIP GoDrive Motors">
+<meta property="og:description" content="Vagas de Prius para aluguel e compra parcelada — quem está na lista fica sabendo antes de todo mundo.">
+<meta property="og:type" content="website">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --bg:#0a0f1a; --card:#111827; --line:#1f2b3f; --txt:#e8eef7; --mut:#93a4bb; --grn:#22c55e; --grn2:#16a34a; --acc:#38bdf8; }
+  body { font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; background:radial-gradient(900px 500px at 50% -10%,rgba(56,189,248,.16),transparent 60%),radial-gradient(700px 420px at 85% 110%,rgba(34,197,94,.12),transparent 60%),var(--bg); color:var(--txt); min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:28px 18px 40px; }
+  .wrap { width:100%; max-width:520px; }
+  .brand { text-align:center; font-weight:800; letter-spacing:.14em; font-size:13px; color:var(--acc); text-transform:uppercase; }
+  .brand span { color:var(--txt); }
+  h1 { margin-top:16px; font-size:clamp(27px,6.4vw,38px); line-height:1.14; font-weight:900; text-align:center; }
+  h1 em { font-style:normal; color:var(--grn); }
+  .sub { margin-top:12px; text-align:center; color:var(--mut); font-size:16px; line-height:1.5; }
+  .card { margin-top:24px; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px 18px; box-shadow:0 18px 50px rgba(0,0,0,.45); }
+  label { display:block; font-size:13px; font-weight:700; letter-spacing:.04em; margin:14px 0 7px; color:var(--txt); }
+  label:first-child { margin-top:0; }
+  input[type=text], input[type=tel] { width:100%; padding:15px 14px; font-size:17px; color:var(--txt); background:#0b1220; border:1.5px solid var(--line); border-radius:12px; outline:none; }
+  input:focus { border-color:var(--acc); }
+  .chips { display:grid; grid-template-columns:1fr 1fr; gap:9px; }
+  .chip { padding:13px 8px; text-align:center; font-size:15px; font-weight:700; color:var(--mut); background:#0b1220; border:1.5px solid var(--line); border-radius:12px; cursor:pointer; user-select:none; }
+  .chip.on { color:#04140a; background:var(--grn); border-color:var(--grn); }
+  .cta { margin-top:20px; width:100%; padding:17px; font-size:18px; font-weight:900; letter-spacing:.02em; color:#04140a; background:linear-gradient(180deg,#2fe673,var(--grn2)); border:none; border-radius:13px; cursor:pointer; box-shadow:0 10px 26px rgba(34,197,94,.35); }
+  .cta:active { transform:scale(.99); }
+  .micro { margin-top:11px; text-align:center; font-size:12.5px; color:var(--mut); line-height:1.45; }
+  .err { display:none; margin-top:12px; padding:11px; border-radius:10px; background:rgba(239,68,68,.13); border:1px solid rgba(239,68,68,.45); color:#fca5a5; font-size:14px; text-align:center; }
+  .perks { margin-top:22px; display:grid; gap:9px; }
+  .perk { display:flex; gap:10px; align-items:flex-start; font-size:15px; color:var(--txt); }
+  .perk b { color:var(--grn); }
+  .perk small { display:block; color:var(--mut); font-size:13px; margin-top:1px; }
+  footer { margin-top:26px; text-align:center; color:var(--mut); font-size:12.5px; line-height:1.6; }
+  .ok { display:none; text-align:center; padding:10px 4px 4px; }
+  .ok .big { font-size:52px; }
+  .ok h2 { margin-top:8px; font-size:24px; font-weight:900; }
+  .ok p { margin-top:8px; color:var(--mut); font-size:15px; line-height:1.5; }
+  .wa { display:block; margin-top:18px; padding:16px; background:var(--grn); color:#04140a; font-weight:900; font-size:17px; border-radius:13px; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">GoDrive <span>Motors</span> · Hillside, NJ</div>
+  <h1>As vagas de Prius abrem e <em>fecham rápido.</em></h1>
+  <p class="sub">Entre pra lista e seja avisado <strong style="color:var(--txt)">antes de todo mundo</strong> quando tiver carro pra aluguel semanal ou compra parcelada.</p>
+
+  <div class="card">
+    <form id="capForm" novalidate>
+      <label for="fNome">Seu nome</label>
+      <input type="text" id="fNome" autocomplete="name" placeholder="Ex.: Maria Silva">
+      <label for="fWhats">Seu WhatsApp</label>
+      <input type="tel" id="fWhats" autocomplete="tel" inputmode="tel" placeholder="(908) 000-0000">
+      <label>O que você procura?</label>
+      <div class="chips" id="chips">
+        <div class="chip" data-v="Aluguel">Aluguel semanal</div>
+        <div class="chip" data-v="Compra parcelada">Compra parcelada</div>
+        <div class="chip on" data-v="Ambos">Quero os dois</div>
+        <div class="chip" data-v="Só receber novidades">Só novidades</div>
+      </div>
+      <button type="submit" class="cta">QUERO RECEBER AS VAGAS →</button>
+      <div class="err" id="err"></div>
+      <p class="micro">Sem spam. Só vagas e oportunidades reais da GoDrive.<br>Ao enviar, você autoriza o contato por WhatsApp/e-mail. Saia quando quiser.</p>
+    </form>
+    <div class="ok" id="okBox">
+      <div class="big">✅</div>
+      <h2>Você entrou pra lista!</h2>
+      <p>Quando abrir a próxima vaga, você fica sabendo primeiro.<br>Quer adiantar? Fala com a gente agora:</p>
+      <a class="wa" id="waBtn" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="perks">
+    <div class="perk"><b>✔</b><div>Aviso antes do anúncio público<small>Quem está na lista tem prioridade nas vagas.</small></div></div>
+    <div class="perk"><b>✔</b><div>Carro pra trabalhar com apps<small>Uber, DoorDash, Instacart e delivery em geral.</small></div></div>
+    <div class="perk"><b>✔</b><div>Direto com a loja, sem burocracia<small>Atendimento em português, espanhol e inglês.</small></div></div>
+  </div>
+
+  <footer>GoDrive Motors · 410 Bloy St, 2nd Floor, Hillside, NJ 07205<br>Aluguel semanal e compra parcelada de Toyota Prius.</footer>
+</div>
+
+<iframe name="leadTarget" style="display:none" title=""></iframe>
+<script>
+(function(){
+  var interesse = 'Ambos';
+  document.getElementById('chips').addEventListener('click', function(e){
+    var c = e.target.closest('.chip'); if(!c) return;
+    document.querySelectorAll('.chip').forEach(function(x){ x.classList.remove('on'); });
+    c.classList.add('on'); interesse = c.getAttribute('data-v');
+  });
+  function origem(){
+    var p = new URLSearchParams(location.search), parts = ['captura-simples'];
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'].forEach(function(k){
+      var v = p.get(k); if(v) parts.push(k + '=' + v);
+    });
+    return parts.join(' | ');
+  }
+  document.getElementById('capForm').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var nome = document.getElementById('fNome').value.trim();
+    var whats = document.getElementById('fWhats').value.trim();
+    var err = document.getElementById('err');
+    var digits = whats.replace(/\D/g,'');
+    if(nome.length < 2){ err.textContent = 'Coloca seu nome pra gente te chamar direito. 🙂'; err.style.display='block'; return; }
+    if(digits.length < 7){ err.textContent = 'Confere seu WhatsApp — é nele que o aviso chega.'; err.style.display='block'; return; }
+    err.style.display = 'none';
+    var fields = {
+      'entry.269127599': nome,
+      'entry.262112799': whats,
+      'entry.1576883131': interesse,
+      'entry.2065188800': origem(),
+      'entry.624390047': 'Sim — autorizou contato por WhatsApp/e-mail no site'
+    };
+    var form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'https://docs.google.com/forms/d/e/1FAIpQLScEl2WxoD2t5n_C5xr9zowBTPY0_dyMQYqlqJlsmK6qHAjJKw/formResponse';
+    form.target = 'leadTarget'; form.style.display = 'none';
+    Object.keys(fields).forEach(function(k){
+      var i = document.createElement('input'); i.type='hidden'; i.name=k; i.value=fields[k]; form.appendChild(i);
+    });
+    document.body.appendChild(form); form.submit();
+    setTimeout(function(){ form.remove(); }, 4000);
+    var msg = 'Olá! Sou ' + nome + ', entrei pra lista da GoDrive (' + interesse + ') e quero receber as vagas.';
+    document.getElementById('waBtn').href = 'https://wa.me/19089356731?text=' + encodeURIComponent(msg);
+    document.getElementById('capForm').style.display = 'none';
+    document.getElementById('okBox').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>
