@@ -18,6 +18,7 @@
   h1 { margin-top:16px; font-size:clamp(27px,6.4vw,38px); line-height:1.14; font-weight:900; text-align:center; }
   h1 em { font-style:normal; color:var(--grn); }
   .sub { margin-top:12px; text-align:center; color:var(--mut); font-size:16px; line-height:1.5; }
+  .offer { margin-top:16px; background:rgba(34,197,94,.12); border:1px solid rgba(34,197,94,.45); border-radius:12px; padding:12px 14px; font-size:15px; line-height:1.5; text-align:center; }
   .card { margin-top:24px; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px 18px; box-shadow:0 18px 50px rgba(0,0,0,.45); }
   label { display:block; font-size:13px; font-weight:700; letter-spacing:.04em; margin:14px 0 7px; color:var(--txt); }
   label:first-child { margin-top:0; }
@@ -47,6 +48,7 @@
   <div class="brand">GoDrive <span>Motors</span> · Hillside, NJ</div>
   <h1>As vagas de Prius abrem e <em>fecham rápido.</em></h1>
   <p class="sub">Entre pra lista e seja avisado <strong style="color:var(--txt)">antes de todo mundo</strong> quando tiver carro pra aluguel semanal ou compra parcelada.</p>
+  <div class="offer">📲 <strong>Cadastre-se e receba no seu WhatsApp</strong> a tabela de valores e a disponibilidade atualizada — sem compromisso.</div>
 
   <div class="card">
     <form id="capForm" novalidate>
@@ -70,7 +72,7 @@
     <div class="ok" id="okBox">
       <div class="big">✅</div>
       <h2>Você entrou pra lista!</h2>
-      <p>Quando abrir a próxima vaga, você fica sabendo primeiro.<br>Quer adiantar? Fala com a gente agora:</p>
+      <p>Quando abrir a próxima vaga, você fica sabendo primeiro.<br>Quer adiantar? Fala com a gente agora:<br><span style="font-size:13px">Atendimento: seg a sex, 9h às 18h (Hillside, NJ).</span></p>
       <a class="wa" id="waBtn" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
     </div>
   </div>
@@ -79,6 +81,8 @@
     <div class="perk"><b>✔</b><div>Aviso antes do anúncio público<small>Quem está na lista tem prioridade nas vagas.</small></div></div>
     <div class="perk"><b>✔</b><div>Carro pra trabalhar com apps<small>Uber, DoorDash, Instacart e delivery em geral.</small></div></div>
     <div class="perk"><b>✔</b><div>Direto com a loja, sem burocracia<small>Atendimento em português, espanhol e inglês.</small></div></div>
+    <div class="perk"><b>✔</b><div>Manutenção incluída no aluguel<small>No aluguel semanal, a manutenção do carro já está incluída.</small></div></div>
+    <div class="perk"><b>✔</b><div>Loja física em Hillside, NJ<small>410 Bloy St, 2nd Floor — atendimento de seg a sex, das 9h às 18h.</small></div></div>
     <div class="perk"><b>✔</b><div>Procurando outro modelo?<small>A GoDrive também trabalha com outros carros. Entra pra lista e conta no WhatsApp o que você precisa.</small></div></div>
   </div>
 
